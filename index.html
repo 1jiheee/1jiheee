@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>자발적아싸</title>
+
+<script> 
+function view_layer(name){ 
+  document.getElementById(name).style.display='block'; 
+} 
+
+function close_layer(name){ 
+  document.getElementById(name).style.display='none'; 
+} 
+</script> 
+
+<style type="text/css">
+	html, body, div, a{margin: 0;padding: 0; border: 0; cursor: url(./img/cursor.cur); }
+
+	.main{ width:1920px; height: 1273px;}
+	.main img:last-child{display:none} 
+	.main:hover img:first-child{display:none} 
+	.main:hover img:last-child{display:inline-block}
+
+	#layer1{position:absolute; left:246px; top:109px; width:600px; z-index:0; display:none;}
+	#layer2{position:absolute; left:350px; top:400px; width:800px; z-index:0;display:none;}
+	#layer3{position:absolute; left:1000px; top:300px; width:500px; z-index:0;display:none;}
+	#layer4{position:absolute; left:300px; top:300px; width:400px; height:240px; z-index:0;display:none;}
+	#layer5{position:absolute; left:1100px; top:50px; width:400px; height:240px; z-index:0;display:none;}
+
+
+</style>
+
+</head>
+
+<body> 
+
+<!-- main 마우스오버 관련 -->
+<div class="main">
+<img src="./img/main.png">
+
+
+	<a href="#" onclick="view_layer('layer1');">
+		<img src="./img/1920_h.png" >
+	</a> 
+
+	
+
+	<a href="#" onclick="view_layer('layer2');">
+		<div id="layer1"> 
+			<img src="./img/A_1.png" onmouseover="this.src='./img/A_1_h.png';" onmouseout="this.src='./img/A_1.png';"title="아싸_0명" style="width: 100%; height: auto;"><!-- 창1 이미지 -->
+
+		<!--	<a href="#" onclick="close_layer('layer1');">X</a> -->
+		</div> 
+	</a> 
+
+
+	<a href="#" onclick="view_layer('layer3');">
+		<div id="layer2" > 
+			<img src="./img/A_2.png" onmouseover="this.src='./img/jj.gif';" onmouseout="this.src='./img/A_2.png';"title="대외활동형 아싸_12명" style="width: 100%; height: auto;"><!-- 창2 이미지 -->
+		<!--	<a href="#" onclick="close_layer('layer2');">X</a> -->
+		</div> 
+	</a> 
+
+
+	<a href="#" onclick="view_layer('layer4');">
+		<div id="layer3" > 
+			<img src="./img/A_3.png" onmouseover="this.src='./img/A_3_h.png';" onmouseout="this.src='./img/A_3.png';"title="대외활동형 아싸_3명" style="width: 100%; height: auto;"><!-- 창3 이미지 -->
+		<!--	<a href="#" onclick="close_layer('layer3');">X</a> -->
+		</div> 
+	</a> 
+	
+
+	<a href="#" onclick="view_layer('layer5');">
+		<div id="layer4" > 
+			<img src="./img/1_1.png" title="대외활동형 아싸_0명" style="width: 100%; height: auto;"><!-- 창4 이미지 --> 
+		<!--	<a href="#" onclick="close_layer('layer4');">X</a> -->
+		</div> 
+	</a> 
+
+	
+		<a href="#" onclick="close_layer('layer1');close_layer('layer2');close_layer('layer3');close_layer('layer4');close_layer('layer5');" title="대외활동형 아싸_0명" style="width: 100%; height: auto;">
+		<div id="layer5" > 
+			<img src="./img/A_sticker.png"><!-- 창5 이미지 --> 
+		</div> 
+	</a> 
+
+
+
+</div>
+
+
+</body> 
+</html>
